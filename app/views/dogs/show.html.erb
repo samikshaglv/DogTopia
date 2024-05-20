@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+<p>
+  <strong>Breed:</strong>
+  <%= @dog.breed %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+<p>
+  <%= image_tag(@dog.image.url) if @dog.image? %>
+</p>
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>

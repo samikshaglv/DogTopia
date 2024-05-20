@@ -1,0 +1,13 @@
+<h1>Your Dogs</h1>
+<%= link_to 'New Dog', new_dog_path, class: "btn btn-primary" %>
+
+<ul>
+  <% @dogs.each do |dog| %>
+    <li>
+      <%= link_to dog.name, dog %>
+      | <%= link_to 'Edit', edit_dog_path(dog) %>
+      | <%= button_to "Destroy", dog_path(dog), method: :delete  %>
+    </li>
+  <% end %>
+</ul>
+ 
